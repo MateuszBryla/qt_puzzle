@@ -41,7 +41,6 @@ SlidingPuzzle::SlidingPuzzle(unsigned size)
 
     // Shuffle the puzzle
     std::srand(std::time(0));
-
     do
     {
         std::random_shuffle(mPuzzleArr, mPuzzleArr + mArraySize);
@@ -238,10 +237,9 @@ bool SlidingPuzzle::isSolvable()
     {
         for (int j = i + 1; j < mArraySize; j++)
         {
-            if (mPuzzleArr[i] && mPuzzleArr[j] && mPuzzleArr[j] > mPuzzleArr[i])
+            if (mPuzzleArr[i] && mPuzzleArr[j] && mPuzzleArr[i] > mPuzzleArr[j])
             {
                 inversions++;
-                break;
             }
         }
     }
