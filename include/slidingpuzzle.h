@@ -23,6 +23,8 @@ public:
     bool isFinished();
 
 protected:
+    bool setEqual(unsigned index_1, unsigned index_2);
+
     unsigned mArraySize;
     unsigned mPuzzleSize;
 

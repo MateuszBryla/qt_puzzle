@@ -227,6 +227,24 @@ bool SlidingPuzzle::isFinished()
     return true;
 }
 
+bool SlidingPuzzle::setEqual(unsigned index_1, unsigned index_2)
+{
+    // Set two elements as equal - may be useful, if two blocks in image mode are the same
+    if ((index_1 > (mArraySize - 1)) || (index_2 > (mArraySize - 1)))
+        return false;
+
+    for (int i = 0; i < mArraySize; i++)
+    {
+        if (mPuzzleArr[i] == index_2)
+            mPuzzleArr[i] = index_1;
+
+        if (mGoalArr[i] == index_2)
+            mGoalArr[i] = index_1;
+    }
+
+    return true;
+}
+
 bool SlidingPuzzle::isSolvable()
 {
     // First step - counts inversions:
