@@ -4,11 +4,15 @@ cmake_minimum_required(VERSION 3.5)
 # Set the project name
 project (qt_puzzle)
 
+# Find OpenCV package - used by the image interface
+find_package(OpenCV REQUIRED)
+
+
 # Create a sources variable with a link to all cpp files to compile
 set(SOURCES_GUI
     src/main.cpp
     src/slidingpuzzle.cpp
-    src/slidingpuzzletextif.cpp
+    src/slidingpuzzleimageif.cpp
 )
 
 set(SOURCES_CLI
@@ -32,7 +36,7 @@ target_include_directories(qt_puzzle_cli
         ${PROJECT_SOURCE_DIR}/include
 )
 
-target_link_libraries( qt_puzzle_cli
+target_link_libraries( qt_puzzle
     PRIVATE
-        ncurses
+        ${OpenCV_LIBS}
 )
