@@ -1,5 +1,4 @@
-#ifndef SLIDINGPUZZLETEXTIF_H
-#define SLIDINGPUZZLECTEXTIF_H
+#pragma once 
 
 #include "slidingpuzzle.h"
 
@@ -10,6 +9,3 @@ class SlidingPuzzleTextIF : public SlidingPuzzle {
         void printGoal();
         void printPuzzle();
 };
-
-
-#endif // SLIDINGPUZZLETEXTIF_H

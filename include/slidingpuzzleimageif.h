@@ -1,5 +1,4 @@
-#ifndef SLIDINGPUZZLEIMAGEIF_H
-#define SLIDINGPUZZLEIMAGEIF_H
+#pragma once
 
 #include "slidingpuzzle.h"
 
@@ -30,5 +29,3 @@ private:
     std::vector<cv::Mat> mPuzzles;
     cv::Mat mStitchedPuzzles;
 };
-
-#endif // SLIDINGPUZZLEIMAGEIF_H

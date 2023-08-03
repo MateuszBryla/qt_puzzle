@@ -1,5 +1,4 @@
-#ifndef SLIDINGPUZZLE_H
-#define SLIDINGPUZZLE_H
+#pragma once
 
 class SlidingPuzzle
 {
@@ -35,5 +34,3 @@ private:
     bool isSolvable();
     unsigned array2id(unsigned x, unsigned y);
 };
-
-#endif // SLIDINGPUZZLE_H

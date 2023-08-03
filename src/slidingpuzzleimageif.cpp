@@ -66,7 +66,7 @@ void SlidingPuzzleImageIF::splitIntoPuzzles()
         {
             cv::Rect roi(j * elementWidth, i * elementHeight, elementWidth, elementHeight);
             element = mImage(roi).clone();
-            mPuzzles.push_back(element.clone());
+            mPuzzles.push_back(element);
         }
     }
 
