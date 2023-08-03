@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SlidingPuzzleGUI</class>
+ <widget class="QMainWindow" name="SlidingPuzzleGUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuGame">
+    <property name="title">
+     <string>Game</string>
+    </property>
+    <addaction name="actionSelectImage"/>
+    <addaction name="actionRestart"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuDifficulty">
+    <property name="title">
+     <string>Difficulty</string>
+    </property>
+    <addaction name="action3x3"/>
+    <addaction name="action4x4"/>
+    <addaction name="action5x5"/>
+    <addaction name="action6x6"/>
+    <addaction name="action7x7"/>
+    <addaction name="action8x8"/>
+   </widget>
+   <widget class="QMenu" name="menuAbout">
+    <property name="title">
+     <string>About</string>
+    </property>
+   </widget>
+   <addaction name="menuGame"/>
+   <addaction name="menuDifficulty"/>
+   <addaction name="menuAbout"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionSelectImage">
+   <property name="text">
+    <string>Select image...</string>
+   </property>
+  </action>
+  <action name="actionRestart">
+   <property name="text">
+    <string>Restart</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="action3x3">
+   <property name="text">
+    <string>3x3</string>
+   </property>
+  </action>
+  <action name="action4x4">
+   <property name="text">
+    <string>4x4</string>
+   </property>
+  </action>
+  <action name="action5x5">
+   <property name="text">
+    <string>5x5</string>
+   </property>
+  </action>
+  <action name="action6x6">
+   <property name="text">
+    <string>6x6</string>
+   </property>
+  </action>
+  <action name="action7x7">
+   <property name="text">
+    <string>7x7</string>
+   </property>
+  </action>
+  <action name="action8x8">
+   <property name="text">
+    <string>8x8</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

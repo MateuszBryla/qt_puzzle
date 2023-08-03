@@ -10,6 +10,12 @@ set(CMAKE_BUILD_TYPE Release)
 # Find OpenCV package - used by the image interface
 find_package(OpenCV REQUIRED)
 
+# QT-related config
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTOUIC ON)
+
+find_package(Qt5 REQUIRED COMPONENTS Widgets)
+
 # Configuration for the initial, text-based version
 set(SOURCES_CLI
     src/clipuzzle.cpp
@@ -41,4 +47,27 @@ target_include_directories(cv_puzzle
 target_link_libraries(cv_puzzle
     PRIVATE
         ${OpenCV_LIBS}
+)
+
+# Configuration for the final, QT-based version
+set(SOURCES_QT
+    src/main.cpp
+    src/slidingpuzzlegui.cpp
+)
+
+set(INCLUDES_QT
+    include/slidingpuzzlegui.h
+)
+
+add_executable(qt_puzzle ${SOURCES_QT} ${INCLUDES_QT})
+
+target_include_directories(qt_puzzle
+    PRIVATE 
+        ${PROJECT_SOURCE_DIR}/include
+)
+
+target_link_libraries(qt_puzzle
+    PRIVATE
+        ${OpenCV_LIBS}
+        Qt5::Widgets
 )
