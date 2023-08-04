@@ -2,7 +2,6 @@
 #include "ui_slidingpuzzlegui.h"
 
 #include "clickablelabel.h"
-#include "exampleimage.h"
 
 #include <QFileDialog>
 #include <QImage>
