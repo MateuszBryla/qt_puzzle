@@ -2,30 +2,34 @@
 
 #include "slidingpuzzle.h"
 
+#include <opencv2/opencv.hpp>
 #include <string>
 #include <vector>
-#include <opencv2/opencv.hpp>
 
 class SlidingPuzzleImageIF : public SlidingPuzzle
 {
 public:
-    enum imageMode
-    {
-        CROP,
-        FIT
-    };
+  enum imageMode
+  {
+    CROP,
+    FIT
+  };
 
-    SlidingPuzzleImageIF(std::string image_path, unsigned size);
-    SlidingPuzzleImageIF(std::string image_path, unsigned size, SlidingPuzzleImageIF::imageMode mode);
+  SlidingPuzzleImageIF(cv::Mat image, unsigned size);
+  SlidingPuzzleImageIF(cv::Mat image, unsigned size,
+                       SlidingPuzzleImageIF::imageMode mode);
+  SlidingPuzzleImageIF(std::string image_path, unsigned size);
+  SlidingPuzzleImageIF(std::string image_path, unsigned size,
+                       SlidingPuzzleImageIF::imageMode mode);
 
-    cv::Mat getImage();
+  cv::Mat getImage();
 
 private:
-    void splitIntoPuzzles();
-    void stitchPuzzles();
+  void splitIntoPuzzles();
+  void stitchPuzzles();
 
-    cv::Mat mImage;
-    std::string mImagePath;
-    std::vector<cv::Mat> mPuzzles;
-    cv::Mat mStitchedPuzzles;
+  cv::Mat mImage;
+  std::string mImagePath;
+  std::vector<cv::Mat> mPuzzles;
+  cv::Mat mStitchedPuzzles;
 };

@@ -34,7 +34,7 @@ target_include_directories(text_puzzle
 set(SOURCES_CV
     src/cvpuzzle.cpp
     src/slidingpuzzle.cpp
-    src/slidingpuzzleimageif.cpp
+    src/slidingpuzzleimageif.cpp    
 )
 
 add_executable(cv_puzzle ${SOURCES_CV})
@@ -52,11 +52,17 @@ target_link_libraries(cv_puzzle
 # Configuration for the final, QT-based version
 set(SOURCES_QT
     src/main.cpp
+    src/slidingpuzzle.cpp
     src/slidingpuzzlegui.cpp
+    src/slidingpuzzleimageif.cpp
+    src/clickablelabel.cpp
 )
 
 set(INCLUDES_QT
+    include/slidingpuzzle.h
     include/slidingpuzzlegui.h
+    include/slidingpuzzleimageif.h
+    include/clickablelabel.h
 )
 
 add_executable(qt_puzzle ${SOURCES_QT} ${INCLUDES_QT})
