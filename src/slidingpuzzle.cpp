@@ -44,7 +44,7 @@ SlidingPuzzle::SlidingPuzzle(unsigned size)
   do
   {
     std::random_shuffle(mPuzzleArr, mPuzzleArr + mArraySize);
-  } while (!isSolvable());
+  } while (!isSolvable() && !isFinished());
 };
 
 SlidingPuzzle::~SlidingPuzzle()
