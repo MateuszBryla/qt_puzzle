@@ -48,3 +48,8 @@ All of them should be started from qt_puzzle/build directory:
 ./qt_puzzle
 
 ```
+## Class diagram
+![alt text](./class_diagram.jpg)
+
+
+
